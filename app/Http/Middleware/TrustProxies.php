@@ -2,7 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Http\Middleware\TrustProxies as Middleware;
+// Update path from Fideloper\Proxy\TrustProxies
+// refernces: https://laracasts.com/discuss/channels/laravel/class-fideloperproxytrustproxies-not-found
+use Illuminate\Http\Middleware\TrusProxies as Middleware;
 use Illuminate\Http\Request;
 
 class TrustProxies extends Middleware

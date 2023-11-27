@@ -26,7 +26,7 @@ COPY composer.json composer.lock ./
 COPY . .
 
 # Generate autoload file dan cache
-RUN composer dump-autoload --optimize
+# RUN composer dump-autoload --optimize
 RUN php artisan config:cache
 RUN php artisan route:cache
 

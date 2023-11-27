@@ -37,7 +37,7 @@ RUN chown -R www-data:www-data storage bootstrap/cache
 RUN chmod -R 775 storage bootstrap/cache
 
 # Expose port yang akan digunakan
-EXPOSE 9000
+EXPOSE 8000
 
-# Jalankan PHP-FPM
-CMD ["php-fpm"]
+RUN composer install --ignore-platform-reqs
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]

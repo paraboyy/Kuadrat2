@@ -20,7 +20,7 @@ WORKDIR /var/www/html
 
 # Salin file Composer dan file lainnya yang diperlukan
 COPY composer.json composer.lock ./
-RUN composer install --no-scripts --no-autoloader
+# RUN composer install --no-scripts --no-autoloader
 
 # Salin seluruh proyek Laravel
 COPY . .

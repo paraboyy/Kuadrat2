@@ -40,4 +40,4 @@ RUN chmod -R 775 storage bootstrap/cache
 EXPOSE 8000
 
 RUN composer install --ignore-platform-reqs
-CMD ["php", "artisan", "serve", "--host=${APP_HOST}", "--port=${PORT}"]
+CMD ["php", "artisan", "serve", "--host=${APP_URL}", "--port=${PORT}"]

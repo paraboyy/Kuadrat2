@@ -27,8 +27,8 @@ COPY . .
 
 # Generate autoload file dan cache
 # RUN composer dump-autoload --optimize
-RUN php artisan config:cache
-RUN php artisan route:cache
+# RUN php artisan config:cache
+# RUN php artisan route:cache
 
 # Berikan hak akses yang sesuai
 RUN chown -R www-data:www-data storage bootstrap/cache
